@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.PhotoShowFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2B2A2A">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpg2Photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#FFB300"
+                android:src="@drawable/ic_arrow_download"
+                tools:ignore="HardcodedText,RtlCompat,RtlHardcoded" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/fabGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/fabDownload"
+                android:layout_alignParentRight="true">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabDownloadLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#FFB300"
+                    android:src="@drawable/ic_arrow_download"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabDownloadMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/fabDownloadHD"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#FFB300"
+                    android:src="@drawable/ic_arrow_download"
+                    app:layout_constraintBottom_toTopOf="@id/fabDownloadLow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabDownloadHD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/fabDownloadMedium"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#FFB300"
+                    android:src="@drawable/ic_arrow_download"
+
+                    app:layout_constraintBottom_toTopOf="@id/fabDownloadMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Full HD"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/fabDownloadHD"
+                    app:layout_constraintEnd_toStartOf="@id/fabDownloadHD"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/fabDownloadHD"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Trung bình"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/fabDownloadMedium"
+                    app:layout_constraintEnd_toStartOf="@id/fabDownloadMedium"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/fabDownloadMedium"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Thấp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/fabDownloadLow"
+                    app:layout_constraintEnd_toStartOf="@id/fabDownloadLow"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/fabDownloadLow"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</layout>
